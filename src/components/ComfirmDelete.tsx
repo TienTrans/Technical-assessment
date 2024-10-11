@@ -13,10 +13,10 @@ const ComfirmDelete: React.FC<ConfirmModalProps> = ({ isOpen, onClose, onConfirm
         <h2 className='text-lg font-bold mb-4'>Delete User?</h2>
         <p>Are you sure want to delete this user?</p>
         <div className='flex justify-end mt-4'>
-          <button onClick={onClose} className='bg-blue-600 text-white py-2 px-4 rounded mr-2'>
+          <button onClick={onClose} className=' text-blue-600 py-2 px-4 rounded mr-2'>
             Cancle
           </button>
-          <button onClick={onConfirm} className='bg-blue-600 text-white py-2 px-4 rounded'>
+          <button onClick={onConfirm} className=' text-blue-600 py-2 px-4 rounded'>
             Delete
           </button>
         </div>

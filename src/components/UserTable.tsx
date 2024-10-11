@@ -64,7 +64,6 @@ const UserTable: React.FC = () => {
 
   const handleExport = () => {
     if (selectedUsers.length === 0) {
-      alert('No users selected for export.')
       return
     }
 

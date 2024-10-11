@@ -13,8 +13,8 @@ const SuccessModal: React.FC<SuccessModalProps> = ({ isOpen, onClose, message })
         <h2 className='text-lg font-bold mb-4'>Registration Successful</h2>
         <p>{message}</p>
         <div className='flex justify-end mt-4'>
-          <button onClick={onClose} className='bg-blue-500 text-white py-2 px-4 rounded'>
-            OK
+          <button onClick={onClose} className=' text-blue-600 py-2 px-4 rounded'>
+            Close
           </button>
         </div>
       </div>
