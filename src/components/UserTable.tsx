@@ -4,7 +4,7 @@ import RightArrow from '../assets/right.png'
 import ComfirmDelete from './ComfirmDelete'
 import SuccessModal from './SuccessModal'
 import exportFromJSON from 'export-from-json'
-// Định nghĩa kiểu cho User
+//
 interface User {
   id: number
   firstName: string
@@ -12,7 +12,6 @@ interface User {
   email: string
 }
 
-// Dữ liệu mẫu cho ví dụ
 const initialUsers: User[] = [
   { id: 1, firstName: 'FN1', lastName: 'LN1', email: 'email1@example.com' },
   { id: 2, firstName: 'FN2', lastName: 'LN2', email: 'email2@example.com' },
@@ -21,7 +20,6 @@ const initialUsers: User[] = [
   { id: 5, firstName: 'FN5', lastName: 'LN5', email: 'email5@example.com' },
   { id: 6, firstName: 'FN6', lastName: 'LN6', email: 'email6@example.com' },
   { id: 7, firstName: 'FN7', lastName: 'LN7', email: 'email7@example.com' }
-  // Thêm nhiều người dùng khác nếu cần
 ]
 
 const UserTable: React.FC = () => {
