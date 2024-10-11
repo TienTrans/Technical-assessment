@@ -3,7 +3,7 @@ import SignUpModal from './SignUpModal'
 import RightArrow from '../assets/right.png'
 import ComfirmDelete from './ComfirmDelete'
 import SuccessModal from './SuccessModal'
-
+import exportFromJSON from 'export-from-json'
 // Định nghĩa kiểu cho User
 interface User {
   id: number
@@ -62,7 +62,30 @@ const UserTable: React.FC = () => {
     setUsers([...users, newUserEntry])
   }
 
-  const handleExport = () => {}
+  const handleExport = () => {
+    if (selectedUsers.length === 0) {
+      alert('No users selected for export.')
+      return
+    }
+
+    const usersToExport = users.filter((user) => selectedUsers.includes(user.id))
+
+    const dataToExport = usersToExport.map((user, index) => ({
+      id: `${index + 1}`,
+      email: user.email,
+      first_name: user.firstName,
+      last_name: user.lastName
+    }))
+
+    const fileName = 'user_data'
+    const exportType = 'csv'
+
+    exportFromJSON({
+      data: dataToExport,
+      fileName,
+      exportType
+    })
+  }
 
   const totalPages = Math.ceil(users.length / itemsPerPage)
   const paginatedUsers = users.slice((page - 1) * itemsPerPage, page * itemsPerPage)
